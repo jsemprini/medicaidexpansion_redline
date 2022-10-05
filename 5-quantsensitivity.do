@@ -6,9 +6,8 @@ set seed 1619
 
 clear all
 
-use "C:\Users\jsemprini\OneDrive - University of Iowa\4-Misc Projects\c-Redline\analyticaldata\RL_5acs_ME_toanalyze.dta"
+use "RL_5acs_ME_toanalyze.dta"
 
-cd "C:\Users\jsemprini\OneDrive - University of Iowa\4-Misc Projects\c-Redline\results"
 
 
 ***change names for racial groups****
