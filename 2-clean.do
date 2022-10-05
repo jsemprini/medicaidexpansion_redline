@@ -3,7 +3,7 @@
 
 clear all
 
-use "C:\Users\jsemprini\OneDrive - University of Iowa\4-Misc Projects\c-Redline\statadata\nhgis\nhgis_2009-2019_rl_toclean.dta"
+use "nhgis_2009-2019_rl_toclean.dta"
 
 
 
@@ -160,7 +160,7 @@ order geoid year state HRS2010 INTERVAL2010 in_rl medicaid post y* t* x*
 drop HRS2010 INTERVAL2010
 
 
-merge m:1 geoid using "C:\Users\jsemprini\OneDrive - University of Iowa\4-Misc Projects\c-Redline\statadata\nhgis\rl_censustract.dta"
+merge m:1 geoid using "rl_censustract.dta"
 tab HRS2010
 tab INTERVAL2010
 
@@ -169,4 +169,4 @@ rename INTERVAL2010 rl_cat
 
 order rl* geoid year state in_rl medicaid post y* t* x*
 
-save "C:\Users\jsemprini\OneDrive - University of Iowa\4-Misc Projects\c-Redline\analyticaldata\RL_5acs_ME_toanalyze.dta", replace
+save "RL_5acs_ME_toanalyze.dta", replace
